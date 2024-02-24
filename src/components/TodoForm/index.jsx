@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import "./TodoForm.css"
 const TodoForm = ({ addTodo }) => {
     const [getText, setText] = useState("");
     const handleSubmit = (e) => {
@@ -9,10 +9,12 @@ const TodoForm = ({ addTodo }) => {
     }
     return (
         <>
+        <div className="Todo_form">
             <form className="form" onSubmit={handleSubmit}>
                 <input value={getText} onChange={e => setText(e.target.value)} type="text" />
                 <button>add</button>
             </form>
+            </div>
         </>
     )
 }
